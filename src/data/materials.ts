@@ -1,0 +1,133 @@
+export interface MaterialItem {
+  id: string;
+  name: string;
+  category: "metal" | "polymer" | "print" | "safety";
+  tagline: string;
+  description: string;
+  image: string;
+  durability: string;
+  bestFor: string[];
+}
+
+export const SIGNAGE_MATERIALS: MaterialItem[] = [
+  {
+    id: "stainless-steel",
+    name: "Stainless Steel (SS 304/316)",
+    category: "metal",
+    tagline: "Corrosion-resistant, sleek metallic finish for 3D corporate branding.",
+    description: "Premium grade 304 and 316 stainless steel cut with fiber laser precision. Available in brushed satin, mirror polish, rose gold, and titanium gold PVD coatings. Highly resistant to outdoor weather, rust, and UV radiation.",
+    image: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
+    durability: "10-15+ Years",
+    bestFor: ["Corporate HQ Entrance", "Building Elevation 3D Logos", "Executive Reception Walls", "Outdoor Pylon Signs"],
+  },
+  {
+    id: "aluminium",
+    name: "Aluminium Composite Panel (ACP)",
+    category: "metal",
+    tagline: "Lightweight, rigid structural substrate for building facades & signboards.",
+    description: "Engineered aluminium sheets with a polyethylene core. Offers flat dimension stability, smooth lacquer finishes, weather resistance, and easy structural framing for shop facades and directional signboards.",
+    image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+    durability: "7-12 Years",
+    bestFor: ["Commercial Facade Cladding", "Shop Front Signboards", "Industrial Park Wayfinders", "Structural Hoardings"],
+  },
+  {
+    id: "acrylic",
+    name: "Cast Acrylic (PMMA)",
+    category: "polymer",
+    tagline: "High optical clarity polymer for vibrant LED illuminated 3D letters.",
+    description: "Ultra-clear cast acrylic sheets with high light transmission. Ideal for LED front-lit and halo-lit letters, clear glass-look office plaques, and custom color laser-cut interior graphics.",
+    image: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=800&q=80",
+    durability: "5-10 Years",
+    bestFor: ["LED Backlit 3D Letters", "Reception Counter Displays", "Illuminated Lightboxes", "Directional Office Signs"],
+  },
+  {
+    id: "pvc",
+    name: "High-Density PVC & Forex",
+    category: "polymer",
+    tagline: "Versatile, moisture-proof foam board for interior signs & wall panels.",
+    description: "Expanded PVC foam board featuring a smooth matte surface. Easy to CNC route, paint, and mount on interior walls. Excellent moisture resistance and light weight make it ideal for interior room signs.",
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+    durability: "5-8 Years",
+    bestFor: ["CNC Layered Wall Art", "Interior Door & Room Names", "Exhibition Display Panels", "Architectural Grids"],
+  },
+  {
+    id: "brass",
+    name: "Solid & Brushed Brass",
+    category: "metal",
+    tagline: "Timeless luxury, warm metallic tone for prestigious corporate logos.",
+    description: "Heavy-gauge brass plates etched, polished, or antique-treated to deliver a sophisticated aesthetic. Perfect for law firms, financial institutions, luxury boutiques, and high-end hotel receptions.",
+    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=800&q=80",
+    durability: "12-20+ Years",
+    bestFor: ["Executive Office Plaques", "Heritage Building Signs", "Brass Etched Door Plates", "Luxury Retail Logos"],
+  },
+  {
+    id: "wall-graphics",
+    name: "Custom Vinyl Wall Graphics",
+    category: "print",
+    tagline: "High-definition printed wall wraps, murals, and textured wall films.",
+    description: "Architectural vinyl wall coverings printed with UV-stable inks. Transforms plain office drywall and brick surfaces into inspiring corporate story walls, brand values graphics, and accent murals.",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    durability: "3-7 Years",
+    bestFor: ["Corporate Meeting Rooms", "Breakout Zone Murals", "Feature Accent Walls", "Exhibition Booth Wraps"],
+  },
+  {
+    id: "flex",
+    name: "Heavy-Duty Frontlit & Backlit Flex",
+    category: "print",
+    tagline: "Cost-effective large format canvas substrates for temporary & permanent hoardings.",
+    description: "Tear-resistant PVC vinyl flex banner material. Available in heavy GSM frontlit and light-diffusing backlit variations for outdoor roadside billboards, promotional event banners, and site hoardings.",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80",
+    durability: "2-5 Years",
+    bestFor: ["Roadside Billboards", "Site Construction Hoardings", "Event Stage Backdrop", "Promotional Lightboxes"],
+  },
+  {
+    id: "canvas",
+    name: "Architectural Canvas Prints",
+    category: "print",
+    tagline: "Fine-art textured canvas for interior art prints and branded framing.",
+    description: "100% cotton archively-coated canvas printed with fade-resistant eco-solvent inks. Stretched over wooden frames for high-end hotel lobby decor, executive suites, and corporate art installations.",
+    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=800&q=80",
+    durability: "8-15 Years",
+    bestFor: ["Executive Suites Decor", "Hotel Lobbies & Corridors", "Bespoke Art Installations", "Branded Fine Art Displays"],
+  },
+  {
+    id: "safety-signage",
+    name: "Industrial Safety Signage",
+    category: "safety",
+    tagline: "OSHA & ISO compliant hazard, caution, and workplace safety markers.",
+    description: "Rigid plastic and aluminium safety signs specifying protective gear requirements, chemical hazards, electrical high-voltage warnings, and floor load limits for factories and warehouses.",
+    image: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80",
+    durability: "5-10 Years",
+    bestFor: ["Manufacturing Plants", "Warehouses & Logistics Centers", "Construction Sites", "Chemical Storage Zones"],
+  },
+  {
+    id: "mandatory-signage",
+    name: "Mandatory Regulatory Signs",
+    category: "safety",
+    tagline: "Clear blue-symbol mandatory action indicators for commercial compliance.",
+    description: "Standardized mandatory instruction boards for commercial buildings, specifying mandatory helmet, mask, eye protection, and cleanroom protocol compliance.",
+    image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?auto=format&fit=crop&w=800&q=80",
+    durability: "5-10 Years",
+    bestFor: ["Cleanroom Entrances", "Server Rooms & IT Hubs", "Factory Floor Entrances", "Laboratory Facilities"],
+  },
+  {
+    id: "traffic-signage",
+    name: "Reflective Traffic & Parking Signs",
+    category: "safety",
+    tagline: "3M retro-reflective road markers for parking garages & gated layouts.",
+    description: "High-intensity retro-reflective sheeting mounted on anti-rust aluminium panels. Ensures clear nighttime visibility for speed limits, stop signs, one-way markers, and basement parking guidance.",
+    image: "https://images.unsplash.com/photo-1572006734416-0275069a531e?auto=format&fit=crop&w=800&q=80",
+    durability: "7-10 Years",
+    bestFor: ["Tech Park Basement Parking", "Gated Residential Layouts", "Commercial Complex Driveways", "Access Control Gates"],
+  },
+  {
+    id: "night-glow-signage",
+    name: "Photoluminescent Night Glow Signs",
+    category: "safety",
+    tagline: "Self-illuminating glow-in-the-dark signs for emergency power outages.",
+    description: "Photoluminescent emergency exit and staircase signs that absorb ambient indoor light and glow bright yellow-green for up to 8 hours during power failure or smoke emergencies.",
+    image: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+    durability: "8-12 Years",
+    bestFor: ["Fire Exit Routes", "Emergency Stairwells", "Sub-Basements & Tunnels", "Cinema Theatres & Venues"],
+  },
+];
