@@ -25,7 +25,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   ];
 
   return (
-    <div className="fixed inset-0 z-50 lg:hidden">
+    <div className="fixed inset-0 z-[100] lg:hidden flex justify-end">
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300"
@@ -33,9 +33,10 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         aria-hidden="true"
       />
 
-      {/* Drawer */}
-      <div className="fixed inset-y-0 right-0 w-full max-w-[285px] bg-white border-l border-slate-200 shadow-2xl flex flex-col justify-start overflow-y-auto p-3.5 pb-8 sm:pb-10 z-10 transition-transform duration-300 space-y-3">
-        {/* Header row */}
+      {/* Drawer Panel */}
+      <div className="relative w-full max-w-[300px] sm:max-w-xs h-full bg-white border-l border-slate-200 shadow-2xl flex flex-col justify-between overflow-y-auto p-4 pb-24 z-10 space-y-4 animate-in slide-in-from-right duration-300">
+        <div className="space-y-4">
+          {/* Header row */}
         <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
           <Link href="/" onClick={onClose} className="flex items-center gap-1.5">
             <div className="w-5 h-5 rounded bg-brand-red flex items-center justify-center font-black text-white text-[10px] shadow-2xs">
@@ -185,20 +186,17 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           </Link>
         </nav>
 
-        {/* Quote Button */}
-        <div>
+        {/* Footer contact */}
+        <div className="border-t border-slate-100 pt-3 space-y-2.5">
           <Link
             href="/get-a-quote"
             onClick={onClose}
-            className="w-full flex items-center justify-center gap-1.5 px-3 py-2 rounded-md bg-brand-red hover:bg-brand-dark-red text-white font-extrabold text-center text-[11px] shadow-2xs transition-all uppercase tracking-wider"
+            className="w-full flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-md bg-brand-red hover:bg-brand-dark-red text-white font-extrabold text-center text-xs shadow-2xs transition-all uppercase tracking-wider"
           >
             Get a Quote
           </Link>
-        </div>
 
-        {/* Footer contact */}
-        <div className="border-t border-slate-100 pt-2.5 space-y-2">
-          <div className="space-y-1 text-[10px] text-slate-600">
+          <div className="space-y-1.5 text-[11px] text-slate-600">
             <a
               href={`tel:${COMPANY_INFO.contact.phoneClean}`}
               className="flex items-center gap-1.5 hover:text-brand-red transition-colors"
@@ -223,5 +221,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 };

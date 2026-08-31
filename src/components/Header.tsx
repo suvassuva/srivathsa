@@ -65,7 +65,8 @@ export const Header: React.FC = () => {
     pathname === "/real-estate";
 
   return (
-    <header
+    <>
+      <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs py-1.5 sm:py-2 lg:py-2.5"
@@ -258,12 +259,13 @@ export const Header: React.FC = () => {
           </div>
         </div>
       </div>
-
-      {/* Mobile Drawer */}
-      <MobileMenu
-        isOpen={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
-      />
     </header>
-  );
+
+    {/* Mobile Drawer (placed outside header to avoid CSS backdrop-filter containing block constraints) */}
+    <MobileMenu
+      isOpen={mobileMenuOpen}
+      onClose={() => setMobileMenuOpen(false)}
+    />
+  </>
+);
 };
