@@ -22,7 +22,7 @@ export default function AboutPage() {
         subtitle="Bangalore's trusted corporate partner for premium signage manufacturing, turnkey interior works, and real estate advisory."
         tag="Company Profile"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/corporate-building-exterior.jpeg"
       />
 
       {/* Company Introduction */}
@@ -70,32 +70,32 @@ export default function AboutPage() {
 
             {/* Visual cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
-                <div className="p-3 rounded-xl bg-red-50 text-brand-red w-fit border border-red-100">
-                  <Layers className="w-6 h-6" />
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm overflow-hidden">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-red-50 text-brand-red w-fit border border-red-100">
+                  <Layers className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-base font-extrabold text-slate-900">Signage Manufacturing</h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                <p className="text-xs text-slate-600 leading-relaxed font-medium break-words">
                   Precision CNC & laser cutting for SS 304, acrylic, brass, wall graphics, and photoluminescent night-glow safety signs.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm">
-                <div className="p-3 rounded-xl bg-red-50 text-brand-red w-fit border border-red-100">
-                  <Compass className="w-6 h-6" />
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 shadow-sm overflow-hidden">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-red-50 text-brand-red w-fit border border-red-100">
+                  <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-base font-extrabold text-slate-900">Turnkey Interiors</h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                <p className="text-xs text-slate-600 leading-relaxed font-medium break-words">
                   Complete commercial office space planning, acoustic ceilings, glass walls, electrical wiring, and custom woodwork.
                 </p>
               </div>
 
-              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 sm:col-span-2 shadow-sm">
-                <div className="p-3 rounded-xl bg-red-50 text-brand-red w-fit border border-red-100">
-                  <Building className="w-6 h-6" />
+              <div className="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-3 sm:col-span-2 shadow-sm overflow-hidden">
+                <div className="p-2.5 sm:p-3 rounded-xl bg-red-50 text-brand-red w-fit border border-red-100">
+                  <Building className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <h3 className="text-base font-extrabold text-slate-900">Real Estate Advisory</h3>
-                <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                <p className="text-xs text-slate-600 leading-relaxed font-medium break-words">
                   Strategic property consulting covering commercial office leases, converted land parcels, residential plots, bungalows, and retreat farm lands across Bangalore expansion corridors.
                 </p>
               </div>

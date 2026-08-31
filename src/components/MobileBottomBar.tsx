@@ -7,15 +7,15 @@ import { COMPANY_INFO } from "@/data/company";
 
 export const MobileBottomBar: React.FC = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-30 block lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 py-2 px-3 shadow-xl">
+    <div className="fixed bottom-0 left-0 right-0 z-40 block lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200 py-1.5 px-2.5 shadow-xl pb-[calc(0.375rem+env(safe-area-inset-bottom,0px))]">
       <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
         {/* Call button */}
         <a
           href={`tel:${COMPANY_INFO.contact.phoneClean}`}
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-slate-100 active:bg-slate-200 text-slate-800 border border-slate-200 transition-colors min-h-[48px]"
+          className="flex flex-row items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-slate-100 active:bg-slate-200 text-slate-800 border border-slate-200 transition-colors min-h-[38px]"
         >
-          <Phone className="w-4 h-4 text-brand-red mb-0.5" />
-          <span className="text-[11px] font-bold tracking-tight">Call Now</span>
+          <Phone className="w-3.5 h-3.5 text-brand-red shrink-0" />
+          <span className="text-[10.5px] font-extrabold tracking-tight">Call Now</span>
         </a>
 
         {/* WhatsApp button */}
@@ -23,19 +23,19 @@ export const MobileBottomBar: React.FC = () => {
           href={COMPANY_INFO.contact.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-emerald-50 active:bg-emerald-100 text-emerald-700 border border-emerald-200 transition-colors min-h-[48px]"
+          className="flex flex-row items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-emerald-50 active:bg-emerald-100 text-emerald-800 border border-emerald-200 transition-colors min-h-[38px]"
         >
-          <MessageSquare className="w-4 h-4 fill-current text-[#25D366] mb-0.5" />
-          <span className="text-[11px] font-bold tracking-tight">WhatsApp</span>
+          <MessageSquare className="w-3.5 h-3.5 fill-current text-[#25D366] shrink-0" />
+          <span className="text-[10.5px] font-extrabold tracking-tight">WhatsApp</span>
         </a>
 
         {/* Quote button */}
         <Link
           href="/get-a-quote"
-          className="flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-brand-red active:bg-brand-dark-red text-white transition-colors min-h-[48px] shadow-sm"
+          className="flex flex-row items-center justify-center gap-1.5 py-1.5 px-2 rounded-lg bg-brand-red active:bg-brand-dark-red text-white transition-colors min-h-[38px] shadow-xs"
         >
-          <FileText className="w-4 h-4 text-white mb-0.5" />
-          <span className="text-[11px] font-bold tracking-tight">Get Quote</span>
+          <FileText className="w-3.5 h-3.5 text-white shrink-0" />
+          <span className="text-[10.5px] font-extrabold tracking-tight">Get Quote</span>
         </Link>
       </div>
     </div>

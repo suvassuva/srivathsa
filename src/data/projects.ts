@@ -20,7 +20,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "Electronic City, Bangalore",
     shortDesc: "Precision-engineered SS 304 halo-lit 3D letters and ACP facade cladding for a tech campus.",
     fullDesc: "Complete architectural signage manufacturing and elevation mounting for a corporate tech headquarters in Electronic City. Featuring 3D brushed stainless steel letters with IP67 warm white LED backlighting mounted on a heavy-gauge dark charcoal ACP background panel.",
-    image: "https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1000&q=80",
+    image: "/stainless-steel-letters-on-wall.jpeg",
     tags: ["Stainless Steel 304", "LED Halo Lit", "ACP Facade", "Corporate HQ"],
     specs: {
       Material: "SS 304 Brushed Satin",
@@ -36,7 +36,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "Outer Ring Road, Bangalore",
     shortDesc: "Turnkey office interior execution covering acoustic panelling, modular false ceilings, and glass partitions.",
     fullDesc: "Turnkey project execution for a 12,000 sq. ft. modern office workspace. Srivathsa Enterprises managed dry-wall layout creation, acoustic ceiling installation, glass conference room partitions, custom reception desk fabrication, and electrical networking setup.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80",
+    image: "/corporate-office-interior-design.jpeg",
     tags: ["Turnkey Interior", "Glass Partitions", "Acoustic Ceilings", "Office Fit-out"],
     specs: {
       Scope: "12,000 Sq. Ft. Commercial Space",
@@ -52,7 +52,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "Indiranagar, Bangalore",
     shortDesc: "Strategic commercial property consulting and site acquisition for corporate regional office.",
     fullDesc: "Facilitated site selection and legal due diligence for a multi-storey commercial property in Indiranagar. Provided end-to-end guidance from title verification to transaction execution for retail and corporate tenancy.",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80",
+    image: "/commercial-building-illuminated.jpeg",
     tags: ["Commercial Property", "Office Lease", "Prime Location", "Legal Due Diligence"],
     specs: {
       PropertyType: "Commercial Building",
@@ -68,7 +68,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "Koramangala, Bangalore",
     shortDesc: "Custom display fixtures, illuminated shelving units, and high-traffic flooring installation.",
     fullDesc: "Complete retail showroom fit-out featuring bespoke wooden display wall bays, acrylic lightboxes, warm linear accent lighting, and heavy-duty commercial flooring designed to sustain high customer footfall.",
-    image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80",
+    image: "/pvc-signage-installation-retail.jpeg",
     tags: ["Retail Interiors", "Display Fixtures", "LED Linear Lighting", "Showroom"],
     specs: {
       Type: "Retail Showroom",
@@ -84,7 +84,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "Whitefield, Bangalore",
     shortDesc: "ISO-compliant photoluminescent exit signage and reflective parking markers across multi-level basement.",
     fullDesc: "Safety and traffic signage installation for a 4-level commercial basement parking structure in Whitefield. Installed photoluminescent night-glow escape route signs, high-intensity reflective column corner guards, and speed limit markers.",
-    image: "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1000&q=80",
+    image: "/safety-signage-industrial-facility.jpeg",
     tags: ["Safety Signage", "Night Glow", "Reflective Traffic", "Basement Parking"],
     specs: {
       Compliance: "ISO 7010 & OSHA Safety Standards",
@@ -100,7 +100,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "North Bangalore Expansion Corridor",
     shortDesc: "Advisory and transaction facilitation for clear-title converted land parcels.",
     fullDesc: "Identified and verified clear-title converted land parcels suitable for residential villa development in North Bangalore. Managed title check documentation, layout boundary verification, and buyer advisory.",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=80",
+    image: "/land-parcel-bangalore.jpeg",
     tags: ["Converted Land", "Residential Plots", "North Bangalore", "Title Verification"],
     specs: {
       Category: "Converted Land Parcel",
@@ -116,7 +116,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "MG Road, Bangalore",
     shortDesc: "Polished brass 3D emblem and etched frosted glass panel for law and finance suite.",
     fullDesc: "Architectural entrance sign featuring precision laser-cut solid brass 3D emblem mounted on a 12mm toughened frosted glass plaque with polished stainless steel stand-offs.",
-    image: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80",
+    image: "/brass-lettering-stone-wall.jpeg",
     tags: ["Polished Brass", "Etched Glass", "Stand-off Fixings", "Executive Suite"],
     specs: {
       Emblem: "Mirror Polished Solid Brass",
@@ -132,7 +132,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     location: "Kanakapura Road Suburbs, Bangalore",
     shortDesc: "Strategic land sourcing for agricultural and farmhouse retreat properties.",
     fullDesc: "Assisted client with sourcing, site feasibility assessment, soil/water availability analysis, and legal land conversion advisory for a green farmhouse retreat plot off Kanakapura Road.",
-    image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1000&q=80",
+    image: "/aerial-view-land-parcel.jpeg",
     tags: ["Farm Land", "Bungalow Plot", "Greenery Retreat", "Kanakapura Road"],
     specs: {
       LandType: "Managed Farm Land",

@@ -19,7 +19,7 @@ export default function GalleryPage() {
         subtitle="Explore high-resolution photography of custom signage manufacturing, interior craftsmanship, material finishes, and on-site installations across Bangalore."
         tag="Gallery & Media"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/corporate-architectural-photography.jpeg"
       />
 
       {/* Main Gallery Section */}

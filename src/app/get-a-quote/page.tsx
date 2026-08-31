@@ -20,7 +20,7 @@ export default function GetAQuotePage() {
         subtitle="Request a detailed commercial proposal for your signage manufacturing, interior workspace, or real estate requirements in Bangalore."
         tag="Commercial Estimate"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/commercial-building-illuminated.jpeg"
       />
 
       {/* Quote Section */}

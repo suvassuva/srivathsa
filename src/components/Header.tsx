@@ -68,26 +68,26 @@ export const Header: React.FC = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm py-3"
-          : "bg-white border-b border-slate-100 py-4 shadow-sm"
+          ? "bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xs py-1.5 sm:py-2 lg:py-2.5"
+          : "bg-white border-b border-slate-100 py-1.5 sm:py-2 lg:py-3 shadow-xs"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2.5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo Branding */}
+          {/* Micro-Sized Logo Branding for Mobile & Desktop */}
           <Link
             href="/"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-red rounded-lg p-1"
+            className="flex items-center gap-1.5 sm:gap-2.5 group focus:outline-none focus:ring-2 focus:ring-brand-red rounded-lg p-0.5"
           >
-            <div className="w-10 h-10 rounded-lg bg-brand-red flex items-center justify-center font-extrabold text-white text-lg tracking-tighter shadow-md group-hover:bg-brand-dark-red transition-all">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-md bg-brand-red flex items-center justify-center font-black text-white text-[10px] sm:text-xs tracking-tighter shadow-xs group-hover:bg-brand-dark-red transition-all shrink-0">
               SE
             </div>
             <div className="flex flex-col">
-              <span className="font-black text-slate-900 text-base sm:text-lg tracking-wide uppercase group-hover:text-brand-red transition-colors">
-                {COMPANY_INFO.name}
+              <span className="font-black text-slate-900 text-[11px] sm:text-base tracking-tight uppercase group-hover:text-brand-red transition-colors leading-none">
+                SRIVATHSA
               </span>
-              <span className="text-[10px] text-slate-500 font-bold tracking-widest uppercase -mt-1 hidden sm:block">
-                Signage • Interiors • Real Estate
+              <span className="text-[9px] sm:text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none mt-0.5">
+                ENTERPRISES
               </span>
             </div>
           </Link>
@@ -96,7 +96,7 @@ export const Header: React.FC = () => {
           <nav className="hidden lg:flex items-center space-x-1">
             <Link
               href="/"
-              className={`px-3.5 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
                 pathname === "/"
                   ? "text-brand-red bg-red-50/80 font-extrabold"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
@@ -107,7 +107,7 @@ export const Header: React.FC = () => {
 
             <Link
               href="/about"
-              className={`px-3.5 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
                 pathname === "/about"
                   ? "text-brand-red bg-red-50/80 font-extrabold"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
@@ -125,7 +125,7 @@ export const Header: React.FC = () => {
             >
               <button
                 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
                   isServicesActive
                     ? "text-brand-red bg-red-50/80 font-extrabold"
                     : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
@@ -189,7 +189,7 @@ export const Header: React.FC = () => {
 
             <Link
               href="/projects"
-              className={`px-3.5 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
                 pathname === "/projects"
                   ? "text-brand-red bg-red-50/80 font-extrabold"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
@@ -200,7 +200,7 @@ export const Header: React.FC = () => {
 
             <Link
               href="/gallery"
-              className={`px-3.5 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
                 pathname === "/gallery"
                   ? "text-brand-red bg-red-50/80 font-extrabold"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
@@ -211,7 +211,7 @@ export const Header: React.FC = () => {
 
             <Link
               href="/contact"
-              className={`px-3.5 py-2 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-bold tracking-wider uppercase transition-all ${
                 pathname === "/contact"
                   ? "text-brand-red bg-red-50/80 font-extrabold"
                   : "text-slate-700 hover:text-slate-900 hover:bg-slate-100/70"
@@ -225,7 +225,7 @@ export const Header: React.FC = () => {
           <div className="hidden lg:flex items-center gap-3">
             <a
               href={`tel:${COMPANY_INFO.contact.phoneClean}`}
-              className="flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-brand-red px-3.5 py-2 rounded-lg bg-slate-100 border border-slate-200 hover:border-slate-300 transition-all"
+              className="flex items-center gap-2 text-xs font-bold text-slate-800 hover:text-brand-red px-3.5 py-1.5 rounded-lg bg-slate-100 border border-slate-200 hover:border-slate-300 transition-all"
             >
               <Phone className="w-3.5 h-3.5 text-brand-red" />
               <span>{COMPANY_INFO.contact.phone}</span>
@@ -233,17 +233,17 @@ export const Header: React.FC = () => {
 
             <Link
               href="/get-a-quote"
-              className="px-5 py-2.5 rounded-lg bg-brand-red hover:bg-brand-dark-red text-white text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+              className="px-4 py-2 rounded-lg bg-brand-red hover:bg-brand-dark-red text-white text-xs font-extrabold uppercase tracking-wider shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5"
             >
               Get a Quote
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          {/* Micro-Sized Mobile Menu Button & Quick Action */}
+          <div className="flex items-center gap-1.5 lg:hidden">
             <Link
               href="/get-a-quote"
-              className="hidden sm:inline-flex px-3.5 py-2 rounded-lg bg-brand-red hover:bg-brand-dark-red text-white text-xs font-extrabold uppercase tracking-wider shadow-sm transition-all"
+              className="hidden sm:inline-flex px-2.5 py-1 rounded-md bg-brand-red hover:bg-brand-dark-red text-white text-[10px] font-extrabold uppercase tracking-wider shadow-xs transition-all"
             >
               Get Quote
             </Link>
@@ -251,9 +251,9 @@ export const Header: React.FC = () => {
             <button
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open navigation menu"
-              className="p-2 rounded-lg bg-slate-100 border border-slate-200 text-slate-800 hover:text-brand-red transition-colors"
+              className="p-1 sm:p-1.5 rounded-md bg-slate-100 border border-slate-200 text-slate-800 hover:text-brand-red transition-colors active:scale-95 flex items-center justify-center"
             >
-              <Menu className="w-6 h-6" />
+              <Menu className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             </button>
           </div>
         </div>

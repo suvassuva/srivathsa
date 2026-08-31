@@ -20,7 +20,7 @@ export default function ServicesPage() {
         subtitle="Signage Manufacturing, Turnkey Interior Project Works, and Commercial & Residential Real Estate Advisory in Bangalore."
         tag="Services Portfolio"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/commercial-complex-entrance.jpeg"
       />
 
       {/* Intro section */}
@@ -44,7 +44,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white h-[400px] shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1000&q=80"
+                src="/stainless-steel-letters-on-wall.jpeg"
                 alt="Signage Manufacturing Solutions"
                 className="w-full h-full object-cover"
               />
@@ -111,7 +111,7 @@ export default function ServicesPage() {
             <div className="space-y-6 lg:order-2">
               <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white h-[400px] shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80"
+                  src="/corporate-office-interior-design.jpeg"
                   alt="Turnkey Interior Works"
                   className="w-full h-full object-cover"
                 />
@@ -178,7 +178,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white h-[400px] shadow-lg">
               <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+                src="/commercial-building-exterior.jpeg"
                 alt="Real Estate Solutions Bangalore"
                 className="w-full h-full object-cover"
               />

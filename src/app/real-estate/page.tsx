@@ -18,35 +18,35 @@ export default function RealEstatePage() {
       title: "Commercial Properties",
       subtitle: "Office Buildings & Retail High-Street",
       desc: "Advisory and sourcing for corporate office spaces, retail store locations, tech park floors, and commercial buildings in prime Bangalore hubs.",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+      image: "/commercial-building-exterior.jpeg",
       features: ["Office Space Buying & Leasing", "High-Street Retail Stores", "Industrial Logistics & Warehouses", "Asset Location Feasibility"],
     },
     {
       title: "Residential Plots",
       subtitle: "Gated Layouts & Strategic Plots",
       desc: "Verified residential layout plots situated in high-growth Bangalore expansion corridors with clear title records.",
-      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+      image: "/land-parcel-bangalore.jpeg",
       features: ["BDA / BMRDA Approved Layouts", "Clear Title Documentation", "Strategic Corridors", "Homebuilding Plots"],
     },
     {
       title: "Converted Land",
       subtitle: "Yellow Zone & Development Land",
       desc: "Clear-title DC converted land parcels suitable for residential villa layouts, commercial projects, and long-term land holdings.",
-      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+      image: "/aerial-view-land-parcel.jpeg",
       features: ["DC Converted Land Parcels", "Legal Title Verification", "Development Feasibility", "Boundary Verification"],
     },
     {
       title: "Bungalows & Villas",
       subtitle: "Independent Architectural Homes",
       desc: "Sourcing luxury independent villas, modern bungalows, and residential estates with quiet surroundings and clear ownership titles.",
-      image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80",
+      image: "/modern-residential-property-exterior.jpeg",
       features: ["Independent Custom Bungalows", "Gated Villa Communities", "Private Viewing Tours", "Transparent Legal Verification"],
     },
     {
       title: "Farm Lands & Retreat Plots",
       subtitle: "Agricultural & Managed Farmlands",
       desc: "Guidance on acquiring countryside farm land plots, quiet weekend retreat holdings, and agricultural lands off main Bangalore bypass corridors.",
-      image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=800&q=80",
+      image: "/aerial-view-land-parcel.jpeg",
       features: ["Managed Farmland Holdings", "Water Availability Analysis", "Countryside Retreat Plots", "Clear Agricultural Titles"],
     },
   ];
@@ -59,7 +59,7 @@ export default function RealEstatePage() {
         subtitle="Strategic advisory and property solutions covering commercial properties, residential plots, converted land, bungalows, and farm lands in Bangalore."
         tag="Real Estate Division"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/commercial-building-illuminated.jpeg"
       />
 
       {/* Intro */}
@@ -91,7 +91,7 @@ export default function RealEstatePage() {
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-lg">
               <div className="relative h-[380px] rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+                  src="/commercial-building-exterior.jpeg"
                   alt="Bangalore Commercial Real Estate"
                   className="w-full h-full object-cover"
                 />

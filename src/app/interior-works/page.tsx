@@ -17,19 +17,19 @@ export default function InteriorWorksPage() {
     {
       title: "Commercial & Office Interiors",
       desc: "Complete layout execution for tech parks, corporate offices, executive boardrooms, and open workstation areas.",
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+      image: "/corporate-office-interior-design.jpeg",
       items: ["Space Planning & Layout", "Drywall Partitions", "Executive Cabins", "Acoustic Wall Panels"],
     },
     {
       title: "Retail & Showroom Fit-Outs",
       desc: "Bespoke store fixtures, display wall bays, product counters, linear LED feature lighting, and durable flooring.",
-      image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+      image: "/pvc-signage-installation-retail.jpeg",
       items: ["Custom Display Shelving", "Product Showcases", "Accent Illumination", "High-Traffic Flooring"],
     },
     {
       title: "Turnkey Installation & Coordination",
       desc: "Single-point site supervision covering electrical wiring, false ceilings, carpeting, painting, and cleaning.",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      image: "/fabricators-working-signage-2.jpeg",
       items: ["False Ceilings & Lighting", "Electrical Wiring", "Carpentry & Joinery", "On-Time Handover"],
     },
   ];
@@ -42,7 +42,7 @@ export default function InteriorWorksPage() {
         subtitle="Turnkey interior project execution with supply, installation and complete project coordination for commercial, office and retail spaces in Bangalore."
         tag="Interior Division"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/corporate-office-interior-design.jpeg"
       />
 
       {/* Intro */}
@@ -80,7 +80,7 @@ export default function InteriorWorksPage() {
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-lg">
               <div className="relative h-[380px] rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80"
+                  src="/workers-installing-office-wall-panel.jpeg"
                   alt="Interior Carpentry Execution"
                   className="w-full h-full object-cover"
                 />

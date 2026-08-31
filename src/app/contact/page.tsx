@@ -22,7 +22,7 @@ export default function ContactPage() {
         subtitle="Connect directly with our Bangalore corporate office for signage manufacturing, interior project execution, or real estate advisory."
         tag="Get in Touch"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/commercial-building-illuminated.jpeg"
       />
 
       {/* Main Contact Section */}

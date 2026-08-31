@@ -32,7 +32,7 @@ export default function ProjectsPage() {
         subtitle="Explore sample project executions spanning corporate signage manufacturing, interior project works, and real estate advisory across Bangalore."
         tag="Case Studies & Executions"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/modern-commercial-building-entrance.jpeg"
       />
 
       {/* Filterable Portfolio Section */}

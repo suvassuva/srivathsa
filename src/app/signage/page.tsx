@@ -25,7 +25,7 @@ export default function SignagePage() {
         subtitle="3D Stainless Steel, LED Backlit Acrylic, Brushed Brass, Wall Graphics, Safety & Photoluminescent Night Glow Signage Solutions in Bangalore."
         tag="Signage Division"
         size="medium"
-        bgImage="https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1920&q=80"
+        bgImage="/stainless-steel-letters-on-wall.jpeg"
       />
 
       {/* Intro */}
@@ -63,7 +63,7 @@ export default function SignagePage() {
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-lg">
               <div className="relative h-[380px] rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80"
+                  src="/fabricators-working-signage-1.jpeg"
                   alt="Stainless Steel Signage Manufacturing"
                   className="w-full h-full object-cover"
                 />

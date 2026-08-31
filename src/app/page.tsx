@@ -12,6 +12,8 @@ import { COMPANY_INFO } from "@/data/company";
 import { SIGNAGE_MATERIALS } from "@/data/materials";
 import { PROJECTS_DATA } from "@/data/projects";
 
+import { AutoSlider } from "@/components/AutoSlider";
+
 export default function HomePage() {
   const showcaseMaterials = SIGNAGE_MATERIALS.slice(0, 6);
   const featuredProjects = PROJECTS_DATA.slice(0, 3);
@@ -27,8 +29,8 @@ export default function HomePage() {
       />
 
       {/* 2. Business Categories Section */}
-      <section className="py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      <section className="py-12 sm:py-24 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 sm:space-y-16">
           <SectionHeading
             tag="Core Divisions"
             title="Three Strategic Business Verticals"
@@ -36,14 +38,15 @@ export default function HomePage() {
             centered={true}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8">
             <ServiceCard
               id="signage"
               title="Signage Solutions"
               subtitle="Manufacturing & Printing"
               description="Custom signage manufactured using premium materials including stainless steel, aluminium, acrylic, PVC and brass."
               href="/signage"
-              image="https://images.unsplash.com/photo-1542744094-3a31b272c490?auto=format&fit=crop&w=1000&q=80"
+              image="/stainless-steel-letters-on-wall.jpeg"
               iconName="signage"
             />
 
@@ -53,7 +56,7 @@ export default function HomePage() {
               subtitle="Turnkey Execution"
               description="Turnkey interior project execution with supply, installation and complete project coordination."
               href="/interior-works"
-              image="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80"
+              image="/corporate-office-interior-design.jpeg"
               iconName="interior"
             />
 
@@ -63,9 +66,44 @@ export default function HomePage() {
               subtitle="Property Advisory"
               description="Property solutions covering commercial properties, residential plots, converted land, bungalows and farm lands."
               href="/real-estate"
-              image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+              image="/commercial-building-exterior.jpeg"
               iconName="real-estate"
             />
+          </div>
+
+          {/* Mobile Auto-running Slider */}
+          <div className="block md:hidden max-w-sm mx-auto">
+            <AutoSlider autoPlayInterval={3500}>
+              <ServiceCard
+                id="signage"
+                title="Signage Solutions"
+                subtitle="Manufacturing & Printing"
+                description="Custom signage manufactured using premium materials including stainless steel, aluminium, acrylic, PVC and brass."
+                href="/signage"
+                image="/stainless-steel-letters-on-wall.jpeg"
+                iconName="signage"
+              />
+
+              <ServiceCard
+                id="interior"
+                title="Interior Works"
+                subtitle="Turnkey Execution"
+                description="Turnkey interior project execution with supply, installation and complete project coordination."
+                href="/interior-works"
+                image="/corporate-office-interior-design.jpeg"
+                iconName="interior"
+              />
+
+              <ServiceCard
+                id="real-estate"
+                title="Real Estate"
+                subtitle="Property Advisory"
+                description="Property solutions covering commercial properties, residential plots, converted land, bungalows and farm lands."
+                href="/real-estate"
+                image="/commercial-building-exterior.jpeg"
+                iconName="real-estate"
+              />
+            </AutoSlider>
           </div>
         </div>
       </section>
@@ -78,7 +116,7 @@ export default function HomePage() {
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-lg">
               <div className="relative h-[420px] rounded-xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1000&q=80"
+                  src="/corporate-building-exterior.jpeg"
                   alt="Srivathsa Enterprises Signage and Interior Execution"
                   className="w-full h-full object-cover"
                 />
@@ -107,7 +145,7 @@ export default function HomePage() {
                 subtitle="Srivathsa Enterprises provides high-end signage manufacturing, turnkey interior project execution, and real estate services in Bangalore."
               />
 
-              <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <div className="space-y-2.5 sm:space-y-4 text-slate-600 text-xs sm:text-base leading-relaxed">
                 <p>
                   Headquartered in Bangalore (560075), Srivathsa Enterprises delivers precision-crafted architectural signages, seamlessly managed corporate interior spaces, and strategic property solutions.
                 </p>
@@ -116,32 +154,55 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 pt-2">
-                <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1 shadow-sm">
+              {/* Desktop Grid */}
+              <div className="hidden sm:grid sm:grid-cols-2 gap-4 pt-2">
+                <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1 shadow-sm overflow-hidden">
                   <span className="text-xs text-brand-red font-black uppercase tracking-wider block">
                     Signage & Printing
                   </span>
-                  <p className="text-xs text-slate-600 font-medium">
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed break-words">
                     SS 304, Acrylic, LED Halo, Safety & Photoluminescent Glow
                   </p>
                 </div>
-                <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1 shadow-sm">
+                <div className="p-4 rounded-xl bg-white border border-slate-200 space-y-1 shadow-sm overflow-hidden">
                   <span className="text-xs text-brand-red font-black uppercase tracking-wider block">
                     Turnkey Interiors
                   </span>
-                  <p className="text-xs text-slate-600 font-medium">
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed break-words">
                     Office Fit-outs, Retail Showrooms & Execution
                   </p>
                 </div>
               </div>
 
-              <div className="pt-4">
+              {/* Mobile AutoSlider */}
+              <div className="block sm:hidden pt-2 max-w-xs mx-auto">
+                <AutoSlider autoPlayInterval={3500}>
+                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 space-y-1 shadow-2xs overflow-hidden">
+                    <span className="text-[11px] text-brand-red font-black uppercase tracking-wider block">
+                      Signage & Printing
+                    </span>
+                    <p className="text-[11px] text-slate-600 font-medium leading-relaxed break-words">
+                      SS 304, Acrylic, LED Halo, Safety & Photoluminescent Glow
+                    </p>
+                  </div>
+                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 space-y-1 shadow-2xs overflow-hidden">
+                    <span className="text-[11px] text-brand-red font-black uppercase tracking-wider block">
+                      Turnkey Interiors
+                    </span>
+                    <p className="text-[11px] text-slate-600 font-medium leading-relaxed break-words">
+                      Office Fit-outs, Retail Showrooms & Execution
+                    </p>
+                  </div>
+                </AutoSlider>
+              </div>
+
+              <div className="pt-3 sm:pt-4">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-lg bg-brand-red hover:bg-brand-dark-red text-white font-extrabold text-sm uppercase tracking-wider transition-all shadow-md group"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-6 sm:py-3 rounded-md sm:rounded-lg bg-brand-red hover:bg-brand-dark-red text-white font-extrabold text-[11px] sm:text-xs uppercase tracking-wider transition-all shadow-xs group whitespace-nowrap"
                 >
                   <span>About Us</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -167,17 +228,27 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {showcaseMaterials.map((mat) => (
               <MaterialCard key={mat.id} material={mat} />
             ))}
           </div>
 
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
-            <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider text-brand-red">
+          {/* Mobile AutoSlider */}
+          <div className="block md:hidden max-w-sm mx-auto">
+            <AutoSlider autoPlayInterval={3800}>
+              {showcaseMaterials.map((mat) => (
+                <MaterialCard key={mat.id} material={mat} />
+              ))}
+            </AutoSlider>
+          </div>
+
+          <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5 sm:space-y-4">
+            <h3 className="text-xs sm:text-sm font-bold text-slate-900 uppercase tracking-wider text-brand-red">
               Full Range of Signage Products Manufactured:
             </h3>
-            <div className="flex flex-wrap gap-2 text-xs">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2 text-xs">
               {[
                 "Stainless Steel 3D",
                 "Aluminium ACP",
@@ -194,9 +265,9 @@ export default function HomePage() {
               ].map((item) => (
                 <span
                   key={item}
-                  className="px-3 py-1.5 rounded-lg bg-white text-slate-700 border border-slate-200 font-semibold shadow-sm"
+                  className="px-2 py-1 sm:px-3 sm:py-1.5 rounded-md sm:rounded-lg bg-white text-slate-700 border border-slate-200 font-semibold shadow-2xs text-[10px] sm:text-xs inline-flex items-center gap-1"
                 >
-                  ✓ {item}
+                  <span className="text-brand-red font-bold">✓</span> {item}
                 </span>
               ))}
             </div>
@@ -214,29 +285,30 @@ export default function HomePage() {
             centered={true}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 title: "Commercial & Office Interiors",
                 desc: "Tech parks, IT workspace layouts, executive conference suites, acoustic walls, and ergonomic workstation setups.",
-                image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+                image: "/corporate-office-interior-design.jpeg",
               },
               {
                 title: "Retail & Showroom Fit-Outs",
                 desc: "Custom merchandise display racks, boutique store counters, linear LED feature lighting, and glass showcases.",
-                image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80",
+                image: "/pvc-signage-installation-retail.jpeg",
               },
               {
                 title: "Turnkey Installation & Coordination",
                 desc: "End-to-end site supervisor oversight, material delivery, carpentry craftsmanship, and clean project handover.",
-                image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+                image: "/fabricators-working-signage-2.jpeg",
               },
             ].map((item, idx) => (
               <div
                 key={idx}
-                className="group rounded-2xl bg-white border border-slate-200 hover:border-brand-red overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-sm hover:shadow-lg"
+                className="group rounded-xl sm:rounded-2xl bg-white border border-slate-200 hover:border-brand-red overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-2xs hover:shadow-lg"
               >
-                <div className="relative h-52 w-full overflow-hidden">
+                <div className="relative h-36 sm:h-52 w-full overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -244,19 +316,19 @@ export default function HomePage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                 </div>
-                <div className="p-6 space-y-3 flex-1 flex flex-col justify-between">
-                  <div className="space-y-2">
-                    <h3 className="text-lg font-black text-slate-900 group-hover:text-brand-red transition-colors">
+                <div className="p-4 sm:p-6 space-y-2.5 sm:space-y-3 flex-1 flex flex-col justify-between">
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <h3 className="text-base sm:text-lg font-black text-slate-900 group-hover:text-brand-red transition-colors leading-snug">
                       {item.title}
                     </h3>
-                    <p className="text-slate-600 text-xs leading-relaxed">
+                    <p className="text-slate-600 text-[11px] sm:text-xs leading-normal sm:leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
-                  <div className="pt-3 border-t border-slate-100">
+                  <div className="pt-2.5 sm:pt-3 border-t border-slate-100">
                     <Link
                       href="/interior-works"
-                      className="text-xs font-bold uppercase tracking-wider text-brand-red hover:text-brand-dark-red transition-colors flex items-center gap-1.5"
+                      className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-brand-red hover:text-brand-dark-red transition-colors flex items-center gap-1.5"
                     >
                       <span>Explore Services</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -267,13 +339,69 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="text-center pt-4">
+          {/* Mobile AutoSlider */}
+          <div className="block md:hidden max-w-sm mx-auto">
+            <AutoSlider autoPlayInterval={3600}>
+              {[
+                {
+                  title: "Commercial & Office Interiors",
+                  desc: "Tech parks, IT workspace layouts, executive conference suites, acoustic walls, and ergonomic workstation setups.",
+                  image: "/corporate-office-interior-design.jpeg",
+                },
+                {
+                  title: "Retail & Showroom Fit-Outs",
+                  desc: "Custom merchandise display racks, boutique store counters, linear LED feature lighting, and glass showcases.",
+                  image: "/pvc-signage-installation-retail.jpeg",
+                },
+                {
+                  title: "Turnkey Installation & Coordination",
+                  desc: "End-to-end site supervisor oversight, material delivery, carpentry craftsmanship, and clean project handover.",
+                  image: "/fabricators-working-signage-2.jpeg",
+                },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="group rounded-xl bg-white border border-slate-200 overflow-hidden transition-all duration-300 flex flex-col justify-between shadow-2xs"
+                >
+                  <div className="relative h-36 w-full overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                  </div>
+                  <div className="p-4 space-y-2.5 flex-1 flex flex-col justify-between">
+                    <div className="space-y-1.5">
+                      <h3 className="text-base font-black text-slate-900 leading-snug">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-600 text-[11px] leading-normal">
+                        {item.desc}
+                      </p>
+                    </div>
+                    <div className="pt-2.5 border-t border-slate-100">
+                      <Link
+                        href="/interior-works"
+                        className="text-[11px] font-bold uppercase tracking-wider text-brand-red flex items-center gap-1.5"
+                      >
+                        <span>Explore Services</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </AutoSlider>
+          </div>
+
+          <div className="text-center pt-3 sm:pt-4">
             <Link
               href="/interior-works"
-              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-lg bg-brand-red hover:bg-brand-dark-red text-white font-extrabold text-sm uppercase tracking-wider shadow-md transition-all"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 sm:px-6 sm:py-3 rounded-md sm:rounded-lg bg-brand-red hover:bg-brand-dark-red text-white font-extrabold text-[11px] sm:text-xs uppercase tracking-wider shadow-xs transition-all whitespace-nowrap"
             >
               <span>Explore Interior Works</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             </Link>
           </div>
         </div>
@@ -297,7 +425,8 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          {/* Desktop Grid */}
+          <div className="hidden lg:grid lg:grid-cols-5 gap-4">
             {[
               {
                 title: "Commercial Properties",
@@ -334,26 +463,26 @@ export default function HomePage() {
               return (
                 <div
                   key={idx}
-                  className="rounded-2xl bg-slate-50 border border-slate-200 p-5 space-y-3 hover:border-brand-red transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-sm"
+                  className="rounded-xl sm:rounded-2xl bg-slate-50 border border-slate-200 p-3.5 sm:p-5 space-y-2.5 sm:space-y-3 hover:border-brand-red transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 shadow-2xs"
                 >
-                  <div className="space-y-2">
-                    <div className="p-3 rounded-xl bg-white text-brand-red w-fit border border-slate-200 shadow-sm">
-                      <IconComp className="w-5 h-5" />
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white text-brand-red w-fit border border-slate-200 shadow-2xs">
+                      <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
-                    <span className="text-[10px] uppercase font-bold text-slate-500 tracking-wider block">
+                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-slate-500 tracking-wider block">
                       {cat.tag}
                     </span>
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-brand-red transition-colors">
+                    <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-brand-red transition-colors leading-snug">
                       {cat.title}
                     </h3>
-                    <p className="text-slate-600 text-xs leading-relaxed font-normal">
+                    <p className="text-slate-600 text-[11px] sm:text-xs leading-normal sm:leading-relaxed font-normal">
                       {cat.desc}
                     </p>
                   </div>
-                  <div className="pt-3 border-t border-slate-200">
+                  <div className="pt-2.5 sm:pt-3 border-t border-slate-200">
                     <Link
                       href="/real-estate"
-                      className="text-[11px] font-bold uppercase tracking-wider text-brand-red flex items-center gap-1"
+                      className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-brand-red flex items-center gap-1"
                     >
                       <span>Enquire Property</span>
                       <ArrowRight className="w-3 h-3" />
@@ -362,6 +491,76 @@ export default function HomePage() {
                 </div>
               );
             })}
+          </div>
+
+          {/* Mobile AutoSlider */}
+          <div className="block lg:hidden max-w-xs mx-auto">
+            <AutoSlider autoPlayInterval={5000}>
+              {[
+                {
+                  title: "Commercial Properties",
+                  tag: "Office & Retail",
+                  desc: "Tech park offices, retail store locations, and commercial buildings.",
+                  icon: Building2,
+                },
+                {
+                  title: "Residential Plots",
+                  tag: "Gated Layouts",
+                  desc: "BDA / BMRDA / Local authority approved residential plots.",
+                  icon: MapPin,
+                },
+                {
+                  title: "Converted Land",
+                  tag: "Development Land",
+                  desc: "Clear title converted land parcels in growth corridors.",
+                  icon: Compass,
+                },
+                {
+                  title: "Bungalows & Villas",
+                  tag: "Luxury Living",
+                  desc: "Independent villas and custom architectural bungalows.",
+                  icon: ShieldCheck,
+                },
+                {
+                  title: "Farm Lands",
+                  tag: "Retreat Plots",
+                  desc: "Agricultural plots and quiet farmhouse retreat holdings.",
+                  icon: CheckCircle2,
+                },
+              ].map((cat, idx) => {
+                const IconComp = cat.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="rounded-xl bg-slate-50 border border-slate-200 p-3.5 space-y-2.5 flex flex-col justify-between shadow-2xs"
+                  >
+                    <div className="space-y-1.5">
+                      <div className="p-2 rounded-lg bg-white text-brand-red w-fit border border-slate-200 shadow-2xs">
+                        <IconComp className="w-4 h-4" />
+                      </div>
+                      <span className="text-[9px] uppercase font-bold text-slate-500 tracking-wider block">
+                        {cat.tag}
+                      </span>
+                      <h3 className="text-sm font-bold text-slate-900 leading-snug">
+                        {cat.title}
+                      </h3>
+                      <p className="text-slate-600 text-[11px] leading-normal font-normal">
+                        {cat.desc}
+                      </p>
+                    </div>
+                    <div className="pt-2.5 border-t border-slate-200">
+                      <Link
+                        href="/real-estate"
+                        className="text-[10px] font-bold uppercase tracking-wider text-brand-red flex items-center gap-1"
+                      >
+                        <span>Enquire Property</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </AutoSlider>
           </div>
         </div>
       </section>
@@ -376,23 +575,46 @@ export default function HomePage() {
             centered={true}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {COMPANY_INFO.whyChooseUs.map((item) => (
               <div
                 key={item.number}
-                className="rounded-2xl bg-white border border-slate-200 p-6 space-y-4 hover:border-brand-red transition-all duration-300 group hover:-translate-y-1 shadow-sm hover:shadow-md"
+                className="rounded-xl sm:rounded-2xl bg-white border border-slate-200 p-4 sm:p-6 space-y-2.5 sm:space-y-4 hover:border-brand-red transition-all duration-300 group hover:-translate-y-1 shadow-2xs hover:shadow-md"
               >
-                <span className="text-3xl font-black text-brand-red font-mono block">
+                <span className="text-2xl sm:text-3xl font-black text-brand-red font-mono block">
                   {item.number}
                 </span>
-                <h3 className="text-lg font-extrabold text-slate-900 group-hover:text-brand-red transition-colors">
+                <h3 className="text-base sm:text-lg font-black text-slate-900 group-hover:text-brand-red transition-colors leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 text-xs leading-relaxed font-medium">
+                <p className="text-slate-600 text-[11px] sm:text-xs leading-normal sm:leading-relaxed font-medium">
                   {item.description}
                 </p>
               </div>
             ))}
+          </div>
+
+          {/* Mobile AutoSlider */}
+          <div className="block md:hidden max-w-xs mx-auto">
+            <AutoSlider autoPlayInterval={5000}>
+              {COMPANY_INFO.whyChooseUs.map((item) => (
+                <div
+                  key={item.number}
+                  className="rounded-xl bg-white border border-slate-200 p-4 space-y-2 shadow-2xs"
+                >
+                  <span className="text-2xl font-black text-brand-red font-mono block">
+                    {item.number}
+                  </span>
+                  <h3 className="text-base font-black text-slate-900 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 text-[11px] leading-normal font-medium">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </AutoSlider>
           </div>
         </div>
       </section>
@@ -429,10 +651,20 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
+          </div>
+
+          {/* Mobile AutoSlider */}
+          <div className="block md:hidden max-w-sm mx-auto">
+            <AutoSlider autoPlayInterval={4000}>
+              {featuredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </AutoSlider>
           </div>
         </div>
       </section>
