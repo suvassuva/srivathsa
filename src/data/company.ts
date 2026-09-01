@@ -4,7 +4,7 @@ export const COMPANY_INFO = {
   tagline: "Signage • Interior Works • Real Estate",
   description: "Complete business solutions for signage manufacturing, interior project execution, and real estate requirements in Bangalore.",
   ceo: {
-    name: "Venkatesh Bablu Gadaputi",
+    name: "Venkatesh Babu Gadaputi",
     title: "Founder & CEO",
   },
   contact: {

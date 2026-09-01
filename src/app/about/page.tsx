@@ -10,7 +10,7 @@ import { COMPANY_INFO } from "@/data/company";
 export const metadata = {
   title: "About Us | Srivathsa Enterprises Bangalore",
   description:
-    "Learn about Srivathsa Enterprises led by Founder & CEO Venkatesh Bablu Gadaputi. Premium signage manufacturing, turnkey interior works, and real estate in Bangalore.",
+    "Learn about Srivathsa Enterprises led by Founder & CEO VenkateshBabu Gadaputi. Premium signage manufacturing, turnkey interior works, and real estate in Bangalore.",
 };
 
 export default function AboutPage() {
