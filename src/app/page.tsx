@@ -121,16 +121,18 @@ export default function HomePage() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-md">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-brand-red flex items-center justify-center text-white font-black text-lg shadow-sm">
+                <div className="absolute bottom-3 left-3 sm:bottom-4 sm:left-4 p-2 sm:p-2.5 rounded-lg bg-white/95 border border-slate-200 backdrop-blur-md shadow-md max-w-[calc(100%-1.5rem)]">
+                  <div className="flex items-center gap-2">
+                    <div className="w-7 h-7 rounded-md bg-brand-red flex items-center justify-center text-white font-black text-xs shrink-0 shadow-sm">
                       SE
                     </div>
-                    <div>
-                      <h4 className="font-extrabold text-slate-900 text-sm">
-                        Venkatesh Bablu Gadaputi
+                    <div className="min-w-0">
+                      <h4 className="font-bold text-slate-900 text-xs sm:text-xs leading-tight truncate">
+                        {COMPANY_INFO.ceo.name}
                       </h4>
-                      <p className="text-xs text-slate-600 font-medium">Founder & CEO • Srivathsa Enterprises</p>
+                      <p className="text-[10px] text-slate-600 font-medium leading-tight truncate">
+                        {COMPANY_INFO.ceo.title} • {COMPANY_INFO.name}
+                      </p>
                     </div>
                   </div>
                 </div>
