@@ -8,9 +8,9 @@ import { CTASection } from "@/components/CTASection";
 import { SIGNAGE_MATERIALS } from "@/data/materials";
 
 export const metadata = {
-  title: "Signage Manufacturing & Printing | Srivathsa Enterprises Bangalore",
+  title: "Signage Manufacturing & Printing Bangalore | Srivathsa Group",
   description:
-    "Custom 3D stainless steel, acrylic, brass, wall graphics, safety, and photoluminescent night glow signage manufacturing in Bangalore.",
+    "Top 3D stainless steel LED letters, acrylic signage board, brass, vinyl wall graphics, and photoluminescent night glow safety signages manufactured in Bangalore.",
 };
 
 export default function SignagePage() {

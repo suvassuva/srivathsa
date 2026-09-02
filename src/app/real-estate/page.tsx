@@ -7,9 +7,9 @@ import { ContactForm } from "@/components/ContactForm";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata = {
-  title: "Real Estate Services Bangalore | Srivathsa Enterprises",
+  title: "Real Estate & Commercial Land Advisory Bangalore | Srivathsa Group",
   description:
-    "Commercial properties, residential plots, converted land parcels, luxury bungalows, and retreat farm land advisory in Bangalore.",
+    "Commercial properties, office fit-out spaces, residential plots, converted land parcels, luxury bungalows, and retreat farm land advisory in Bangalore.",
 };
 
 export default function RealEstatePage() {

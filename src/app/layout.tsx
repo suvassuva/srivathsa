@@ -20,26 +20,37 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Srivathsa Enterprises | Signage, Interior Works & Real Estate Bangalore",
+  metadataBase: new URL("https://srivathsagroup.in"),
+  title: {
+    default: "Srivathsa Group | Signage, Interior Works & Real Estate Bangalore",
+    template: "%s | Srivathsa Group",
+  },
   description:
-    "Srivathsa Enterprises provides signage manufacturing, interior project works and real estate services in Bangalore.",
+    "Srivathsa Group provides top-rated 3D LED signage manufacturing, turnkey commercial office interior works, and real estate advisory services in Bangalore.",
   keywords: [
     "Signage Manufacturing Bangalore",
+    "Signboard Manufacturer Near Me",
     "3D LED Stainless Steel Letters",
+    "Acrylic Signage Board Maker Bangalore",
     "Turnkey Interior Works Bangalore",
-    "Commercial Office Fit-outs",
-    "Real Estate Bangalore",
+    "Commercial Office Fit-outs Bangalore",
+    "Real Estate Advisory Bangalore",
     "Commercial Property Advisory",
     "Converted Land Plots Bangalore",
     "Safety Traffic Night Glow Signage",
+    "Srivathsa Enterprises",
+    "Srivathsa Group Bangalore",
   ],
   authors: [{ name: COMPANY_INFO.ceo.name }],
   creator: COMPANY_INFO.name,
+  alternates: {
+    canonical: "https://srivathsagroup.in",
+  },
   openGraph: {
-    title: "Srivathsa Enterprises | Signage, Interior Works & Real Estate Bangalore",
+    title: "Srivathsa Group | Signage, Interior Works & Real Estate Bangalore",
     description:
-      "Complete business solutions for signage manufacturing, interior project execution and real estate requirements in Bangalore.",
-    url: "https://srivathsaenterprises.com",
+      "Complete business solutions for signage manufacturing, turnkey interior project execution, and real estate requirements in Bangalore.",
+    url: "https://srivathsagroup.in",
     siteName: COMPANY_INFO.name,
     locale: "en_IN",
     type: "website",
@@ -54,6 +65,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

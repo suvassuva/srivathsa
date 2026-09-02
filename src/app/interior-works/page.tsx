@@ -7,9 +7,9 @@ import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { CTASection } from "@/components/CTASection";
 
 export const metadata = {
-  title: "Turnkey Interior Works | Srivathsa Enterprises Bangalore",
+  title: "Turnkey Commercial Interior Works Bangalore | Srivathsa Group",
   description:
-    "Commercial office interiors, retail fit-outs, acoustic ceilings, glass partitions, custom woodwork, and turnkey project execution in Bangalore.",
+    "Commercial office interiors, retail store fit-outs, acoustic ceilings, glass partitions, custom woodwork, and turnkey project execution in Bangalore.",
 };
 
 export default function InteriorWorksPage() {
