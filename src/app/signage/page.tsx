@@ -8,6 +8,8 @@ import { CTASection } from "@/components/CTASection";
 import { SignageSlider } from "@/components/SignageSlider";
 import { SIGNAGE_MATERIALS } from "@/data/materials";
 import { GALLERY_DATA } from "@/data/gallery";
+import { VIDEO_SHOWCASE_DATA } from "@/data/videos";
+import { InlineVideoCard } from "@/components/InlineVideoCard";
 
 export const metadata = {
   title: "Signage Manufacturing & Printing Bangalore | Srivathsa Group",
@@ -23,6 +25,8 @@ export default function SignagePage() {
   const signagePortfolioItems = GALLERY_DATA.filter(
     (item) => item.category === "signage" || item.category === "installation" || item.category === "materials"
   );
+  const signageVideos = VIDEO_SHOWCASE_DATA.filter((v) => v.category === "signage");
+  const laserVideo = VIDEO_SHOWCASE_DATA.find((v) => v.id === "laser-cutting-stainless-steel") || signageVideos[0];
 
   return (
     <div className="space-y-0 bg-slate-50">
@@ -67,23 +71,9 @@ export default function SignagePage() {
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-lg">
-              <div className="relative h-[380px] rounded-xl overflow-hidden">
-                <img
-                  src="/fabricators-working-signage-1.jpeg"
-                  alt="Stainless Steel Signage Manufacturing"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-sm">
-                  <span className="text-xs font-black uppercase tracking-widest text-brand-red block">
-                    Manufacturing Feature
-                  </span>
-                  <h4 className="text-sm font-bold text-slate-900">
-                    Fiber Laser Cutting & CNC 3D Channel Letter Fabrication
-                  </h4>
-                </div>
-              </div>
+            {/* Interactive Live Video Demonstration */}
+            <div>
+              <InlineVideoCard video={laserVideo} aspect="video" />
             </div>
           </div>
         </div>
@@ -114,6 +104,24 @@ export default function SignagePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {metalMaterials.map((material) => (
               <MaterialCard key={material.id} material={material} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Workshop Video Footage: Signage In Action */}
+      <section className="py-20 bg-slate-900 text-white border-b border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+          <SectionHeading
+            tag="Workshop & Site Footage"
+            title="Signage Fabrication In Motion"
+            subtitle="Watch raw footage from our Bangalore manufacturing facility: CNC laser cutting, dimensional channel assembly, and pylon monolith installation."
+            centered={true}
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {signageVideos.map((vid) => (
+              <InlineVideoCard key={vid.id} video={vid} aspect="video" />
             ))}
           </div>
         </div>

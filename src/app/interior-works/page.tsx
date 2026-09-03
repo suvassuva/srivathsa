@@ -5,6 +5,8 @@ import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { CTASection } from "@/components/CTASection";
+import { VIDEO_SHOWCASE_DATA } from "@/data/videos";
+import { InlineVideoCard } from "@/components/InlineVideoCard";
 
 export const metadata = {
   title: "Turnkey Commercial Interior Works Bangalore | Srivathsa Group",
@@ -13,6 +15,8 @@ export const metadata = {
 };
 
 export default function InteriorWorksPage() {
+  const interiorVideo = VIDEO_SHOWCASE_DATA.find((v) => v.id === "corporate-logo-slate-wall") || VIDEO_SHOWCASE_DATA[2];
+
   const interiorServicesList = [
     {
       title: "Commercial & Office Interiors",
@@ -77,23 +81,8 @@ export default function InteriorWorksPage() {
               </div>
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white p-2 shadow-lg">
-              <div className="relative h-[380px] rounded-xl overflow-hidden">
-                <img
-                  src="/workers-installing-office-wall-panel.jpeg"
-                  alt="Interior Carpentry Execution"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/95 border border-slate-200 backdrop-blur-md shadow-sm">
-                  <span className="text-xs font-black uppercase tracking-widest text-brand-red block">
-                    Precision Craftsmanship
-                  </span>
-                  <h4 className="text-sm font-bold text-slate-900">
-                    Custom Woodwork & On-Site Installation Supervision
-                  </h4>
-                </div>
-              </div>
+            <div>
+              <InlineVideoCard video={interiorVideo} aspect="video" />
             </div>
           </div>
         </div>

@@ -3,13 +3,14 @@ import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GalleryGrid } from "@/components/GalleryGrid";
 import { SignageSlider } from "@/components/SignageSlider";
+import { VideoReelSection } from "@/components/VideoReelSection";
 import { CTASection } from "@/components/CTASection";
 import { GALLERY_DATA } from "@/data/gallery";
 
 export const metadata = {
-  title: "Photo Gallery | Srivathsa Enterprises Bangalore",
+  title: "Photo & Video Gallery | Srivathsa Enterprises Bangalore",
   description:
-    "Explore the visual gallery of 3D stainless steel signage, acrylic letters, office interior fit-outs, and property executions by Srivathsa Enterprises.",
+    "Explore the visual gallery and video clips of 3D stainless steel signage, CNC laser cutting, office interior fit-outs, and commercial property executions by Srivathsa Enterprises.",
 };
 
 export default function GalleryPage() {
@@ -20,10 +21,17 @@ export default function GalleryPage() {
       {/* Hero */}
       <Hero
         title="Visual Showcase Gallery"
-        subtitle="Explore high-resolution photography of custom signage manufacturing, interior craftsmanship, material finishes, and on-site installations across Bangalore."
+        subtitle="Explore high-resolution photography and cinematic video footage of custom signage manufacturing, interior craftsmanship, material finishes, and on-site installations across Bangalore."
         tag="Gallery & Media"
         size="medium"
         bgImage="/corporate-architectural-photography.jpeg"
+      />
+
+      {/* Featured Video Reels Section */}
+      <VideoReelSection
+        title="Live Workshop & Execution Footage"
+        subtitle="Watch full-motion recordings of our CNC fiber laser cutting, 3D architectural signage assembly, corporate reception branding, and high-rise commercial structures."
+        tag="Cinematic Video Reels"
       />
 
       {/* Featured Auto-Playing Reel */}

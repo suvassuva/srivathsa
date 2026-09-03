@@ -15,6 +15,7 @@ import { PROJECTS_DATA } from "@/data/projects";
 import { GALLERY_DATA } from "@/data/gallery";
 
 import { AutoSlider } from "@/components/AutoSlider";
+import { VideoReelSection } from "@/components/VideoReelSection";
 
 export default function HomePage() {
   const showcaseMaterials = SIGNAGE_MATERIALS.slice(0, 6);
@@ -112,6 +113,13 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 2.5. Video Showcase Section */}
+      <VideoReelSection
+        title="Manufacturing & Execution In Motion"
+        subtitle="Watch our precision CNC laser cutting, dimensional letter craftsmanship, corporate slate wall branding, and high-rise commercial installations across Bangalore."
+        tag="Live Site & Workshop Footage"
+      />
 
       {/* 3. About Preview Section */}
       <section className="py-24 bg-slate-50 border-b border-slate-200">
