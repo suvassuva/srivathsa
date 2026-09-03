@@ -16,7 +16,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Custom Signage Manufacturing",
     shortDesc: "Architectural 3D LED letters, stainless steel, acrylic, and brass metal branding signs for commercial buildings.",
     fullDesc: "Srivathsa Enterprises specializes in custom signage manufacturing engineered for high visual impact and durability. Utilizing CNC router precision and laser cutting technology, we fabricate stainless steel 3D letters, illuminated acrylic boards, brushed brass logos, and heavy-duty structural entrance signages for corporate offices, retail stores, and commercial complexes.",
-    image: "/stainless-steel-letters-on-wall.jpeg",
+    image: "/signage-real-01.jpeg",
     features: [
       "3D Stainless Steel (SS 304 / 316 Grade) Channel Letters",
       "LED Backlit & Frontlit Acrylic Letters",
@@ -32,7 +32,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Large Format Printing & Graphics",
     shortDesc: "High-resolution vinyl graphics, flex banners, canvas prints, and frosted glass branding.",
     fullDesc: "We provide high-impact large-format printing and graphic solutions tailored for corporate interiors, promotional hoardings, glass partitions, and wall decor. Using eco-solvent and UV flatbed printing technologies, our graphics retain vibrant colors and crisp details under high-exposure lighting conditions.",
-    image: "/workers-installing-office-wall-panel.jpeg",
+    image: "/signage-real-22.jpeg",
     features: [
       "Custom Wall Graphics & Architectural Murals",
       "Frosted Glass Vinyl & Privacy Pattern Films",
@@ -48,7 +48,7 @@ export const SERVICES_DATA: ServiceDetail[] = [
     title: "Safety, Traffic & Photoluminescent Signs",
     shortDesc: "Compliant industrial safety signage, traffic control boards, and photoluminescent night-glow emergency markers.",
     fullDesc: "Ensuring regulatory compliance and site safety with photoluminescent (night-glow) emergency exit signs, reflective traffic warning posts, mandatory industrial safety symbols, and directional wayfinding panels for tech parks, manufacturing plants, and residential layouts.",
-    image: "/safety-signage-industrial-facility.jpeg",
+    image: "/signage-real-08.jpeg",
     features: [
       "Photoluminescent Night-Glow Emergency Exit Signs",
       "ISO Compliant Mandatory Safety & Hazard Signs",

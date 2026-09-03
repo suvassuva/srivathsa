@@ -13,14 +13,21 @@ export const MaterialCard: React.FC<MaterialCardProps> = ({ material }) => {
   return (
     <div className="rounded-xl bg-white border border-slate-200 hover:border-brand-red/50 overflow-hidden transition-all duration-300 flex flex-col justify-between group hover:shadow-md shadow-2xs">
       {/* Image header */}
-      <div className="relative h-32 sm:h-40 w-full overflow-hidden bg-slate-100">
-        <div
-          className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-          style={{ backgroundImage: `url('${material.image}')` }}
+      <div className="relative h-44 sm:h-52 w-full overflow-hidden bg-slate-900">
+        <img
+          src={material.image}
+          alt={material.name}
+          className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${
+            material.imagePosition === "top"
+              ? "object-top"
+              : material.imagePosition === "bottom"
+              ? "object-bottom"
+              : "object-center"
+          }`}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
 
-        <div className="absolute bottom-2 left-2.5 flex items-center gap-1 bg-white/95 px-2 py-0.5 rounded text-[10px] sm:text-[11px] text-slate-800 backdrop-blur-xs border border-slate-200 shadow-2xs font-semibold">
+        <div className="absolute bottom-2 left-2.5 flex items-center gap-1 bg-white/95 px-2 py-0.5 rounded text-[10px] sm:text-[11px] text-slate-800 backdrop-blur-xs border border-slate-200 shadow-2xs font-bold z-10">
           <Shield className="w-3 h-3 text-brand-red" />
           <span>Durability: {material.durability}</span>
         </div>

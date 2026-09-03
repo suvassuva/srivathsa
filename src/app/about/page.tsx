@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import { UserCheck, Layers, Compass, Building } from "lucide-react";
+import { UserCheck, Layers, Compass, Building, FileText, Download } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ProcessTimeline } from "@/components/ProcessTimeline";
@@ -49,7 +48,7 @@ export default function AboutPage() {
               </div>
 
               {/* Leadership badge */}
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between shadow-sm">
+              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm">
                 <div>
                   <span className="text-xs text-slate-500 font-bold uppercase tracking-widest block">
                     Leadership
@@ -61,9 +60,38 @@ export default function AboutPage() {
                     Founder & CEO
                   </span>
                 </div>
-                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-xs font-bold text-slate-700 border border-slate-200 shadow-sm">
+                <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white text-xs font-bold text-slate-700 border border-slate-200 shadow-sm w-fit">
                   <UserCheck className="w-4 h-4 text-brand-red" />
                   <span>Bangalore HQ</span>
+                </div>
+              </div>
+
+              {/* Company Profile PDF Brochure Action Box */}
+              <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 text-white space-y-4 shadow-lg border border-slate-700">
+                <div className="flex items-center gap-3">
+                  <div className="p-3 rounded-xl bg-brand-red text-white shrink-0">
+                    <FileText className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-extrabold uppercase tracking-wide">
+                      Official Company Profile PDF
+                    </h4>
+                    <p className="text-xs text-slate-300">
+                      Download our complete 50-page corporate portfolio, machine specifications, & capabilities brochure.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="pt-2">
+                  <a
+                    href={COMPANY_INFO.companyProfilePdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2.5 px-6 py-3 rounded-xl bg-brand-red hover:bg-brand-dark-red text-white text-xs font-black uppercase tracking-wider transition-all shadow-md w-full sm:w-auto"
+                  >
+                    <Download className="w-4 h-4" />
+                    <span>Download Company Profile (PDF)</span>
+                  </a>
                 </div>
               </div>
             </div>

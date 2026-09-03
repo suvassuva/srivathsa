@@ -59,17 +59,30 @@ export const Footer: React.FC = () => {
                 { label: "Our Services", href: "/services" },
                 { label: "Projects Portfolio", href: "/projects" },
                 { label: "Photo Gallery", href: "/gallery" },
+                { label: "Company Profile (PDF)", href: COMPANY_INFO.companyProfilePdf, external: true },
                 { label: "Contact Us", href: "/contact" },
                 { label: "Get a Quote", href: "/get-a-quote" },
               ].map((item) => (
                 <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="hover:text-white transition-colors flex items-center gap-1 group text-slate-300 text-xs"
-                  >
-                    <span>{item.label}</span>
-                    <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-red-400 transition-colors" />
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-white transition-colors flex items-center gap-1 group text-red-400 font-bold text-xs"
+                    >
+                      <span>{item.label}</span>
+                      <ArrowUpRight className="w-3 h-3 text-red-400 group-hover:translate-x-0.5 transition-transform" />
+                    </a>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="hover:text-white transition-colors flex items-center gap-1 group text-slate-300 text-xs"
+                    >
+                      <span>{item.label}</span>
+                      <ArrowUpRight className="w-3 h-3 text-slate-500 group-hover:text-red-400 transition-colors" />
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

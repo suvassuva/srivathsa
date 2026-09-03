@@ -44,7 +44,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-white h-[400px] shadow-lg">
               <img
-                src="/stainless-steel-letters-on-wall.jpeg"
+                src="/signage-real-05.jpeg"
                 alt="Signage Manufacturing Solutions"
                 className="w-full h-full object-cover"
               />

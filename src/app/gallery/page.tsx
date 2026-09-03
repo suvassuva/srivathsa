@@ -2,7 +2,9 @@ import React from "react";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { GalleryGrid } from "@/components/GalleryGrid";
+import { SignageSlider } from "@/components/SignageSlider";
 import { CTASection } from "@/components/CTASection";
+import { GALLERY_DATA } from "@/data/gallery";
 
 export const metadata = {
   title: "Photo Gallery | Srivathsa Enterprises Bangalore",
@@ -11,6 +13,8 @@ export const metadata = {
 };
 
 export default function GalleryPage() {
+  const featuredSlides = GALLERY_DATA.slice(0, 30);
+
   return (
     <div className="space-y-0 bg-slate-50">
       {/* Hero */}
@@ -22,7 +26,20 @@ export default function GalleryPage() {
         bgImage="/corporate-architectural-photography.jpeg"
       />
 
-      {/* Main Gallery Section */}
+      {/* Featured Auto-Playing Reel */}
+      <section className="py-16 bg-slate-100/80 border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SignageSlider
+            items={featuredSlides}
+            autoPlayInterval={3800}
+            title="Featured Works Reel"
+            subtitle="Auto-running slideshow of client signage fabrications, PDF presentation slides, and interior execution highlights."
+            tag="Auto Slideshow"
+          />
+        </div>
+      </section>
+
+      {/* Main Filterable Gallery Section */}
       <section className="py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <SectionHeading
@@ -41,3 +58,4 @@ export default function GalleryPage() {
     </div>
   );
 }
+

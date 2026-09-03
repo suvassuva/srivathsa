@@ -3,6 +3,7 @@ export const COMPANY_INFO = {
   shortName: "Srivathsa",
   tagline: "Signage • Interior Works • Real Estate",
   description: "Complete business solutions for signage manufacturing, interior project execution, and real estate requirements in Bangalore.",
+  companyProfilePdf: "/srivathsa-company-profile.pdf",
   ceo: {
     name: "Venkatesh Babu Gadaputi",
     title: "Founder & CEO",

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
 import { GalleryItem } from "@/data/gallery";
 
@@ -23,6 +23,16 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
 
   const currentItem = items[currentIndex];
 
+  const handlePrev = useCallback(() => {
+    setIsZoomed(false);
+    onNavigate((currentIndex - 1 + items.length) % items.length);
+  }, [currentIndex, items.length, onNavigate]);
+
+  const handleNext = useCallback(() => {
+    setIsZoomed(false);
+    onNavigate((currentIndex + 1) % items.length);
+  }, [currentIndex, items.length, onNavigate]);
+
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
@@ -33,19 +43,9 @@ export const GalleryLightbox: React.FC<GalleryLightboxProps> = ({
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [isOpen, currentIndex, items.length]);
+  }, [isOpen, onClose, handlePrev, handleNext]);
 
   if (!isOpen || !currentItem) return null;
-
-  const handlePrev = () => {
-    setIsZoomed(false);
-    onNavigate((currentIndex - 1 + items.length) % items.length);
-  };
-
-  const handleNext = () => {
-    setIsZoomed(false);
-    onNavigate((currentIndex + 1) % items.length);
-  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 sm:p-6 transition-all duration-300">

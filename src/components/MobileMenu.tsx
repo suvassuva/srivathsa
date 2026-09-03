@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { X, Phone, Mail, MapPin, ArrowRight, ChevronDown, Layers, Compass, Building2 } from "lucide-react";
+import { X, Phone, Mail, MapPin, ArrowRight, ChevronDown, Layers, Compass, Building2, FileText } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { WhatsAppButton } from "./WhatsAppButton";
 
@@ -184,6 +184,20 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               <span>Contact</span>
               <ArrowRight className="w-3.5 h-3.5 text-slate-400" />
             </Link>
+
+            <a
+              href={COMPANY_INFO.companyProfilePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onClose}
+              className="flex items-center justify-between px-2.5 py-1.5 rounded-md text-xs font-bold text-brand-red bg-red-50/60 border border-red-100 transition-all my-1"
+            >
+              <div className="flex items-center gap-1.5">
+                <FileText className="w-3.5 h-3.5 text-brand-red" />
+                <span>Company Profile (PDF)</span>
+              </div>
+              <ArrowRight className="w-3.5 h-3.5 text-brand-red" />
+            </a>
           </nav>
 
           {/* Footer contact */}

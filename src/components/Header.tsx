@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, ChevronDown, Layers, Compass, Building2, ArrowRight } from "lucide-react";
+import { Menu, Phone, ChevronDown, Layers, Compass, Building2, ArrowRight, FileText } from "lucide-react";
 import { COMPANY_INFO } from "@/data/company";
 import { MobileMenu } from "./MobileMenu";
 
@@ -223,10 +223,21 @@ export const Header: React.FC = () => {
             </nav>
 
             {/* Desktop Right Action Area */}
-            <div className="hidden lg:flex items-center gap-2.5">
+            <div className="hidden lg:flex items-center gap-2">
+              <a
+                href={COMPANY_INFO.companyProfilePdf}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs font-bold text-slate-700 hover:text-brand-red px-2.5 py-1.5 rounded-md bg-slate-50 border border-slate-200 hover:border-red-200 transition-all"
+                title="Download Official Company Profile PDF"
+              >
+                <FileText className="w-3.5 h-3.5 text-brand-red" />
+                <span>PDF Profile</span>
+              </a>
+
               <a
                 href={`tel:${COMPANY_INFO.contact.phoneClean}`}
-                className="flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-brand-red px-3 py-1.5 rounded-md bg-slate-100 border border-slate-200 hover:border-slate-300 transition-all"
+                className="flex items-center gap-1.5 text-xs font-bold text-slate-800 hover:text-brand-red px-2.5 py-1.5 rounded-md bg-slate-100 border border-slate-200 hover:border-slate-300 transition-all"
               >
                 <Phone className="w-3.5 h-3.5 text-brand-red" />
                 <span>{COMPANY_INFO.contact.phone}</span>
@@ -234,7 +245,7 @@ export const Header: React.FC = () => {
 
               <Link
                 href="/get-a-quote"
-                className="px-3.5 py-1.5 rounded-md bg-brand-red hover:bg-brand-dark-red text-white text-xs font-extrabold uppercase tracking-wider shadow-xs hover:shadow-sm transition-all transform hover:-translate-y-0.5"
+                className="px-3 py-1.5 rounded-md bg-brand-red hover:bg-brand-dark-red text-white text-xs font-extrabold uppercase tracking-wider shadow-xs hover:shadow-sm transition-all transform hover:-translate-y-0.5"
               >
                 Get a Quote
               </Link>

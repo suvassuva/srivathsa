@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle2, Send, MessageSquare, Calculator } from "lucide-react";
-import { COMPANY_INFO } from "@/data/company";
 
 export const QuoteForm: React.FC = () => {
   const searchParams = useSearchParams();
@@ -24,15 +23,6 @@ export const QuoteForm: React.FC = () => {
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    if (initialService) {
-      setFormData((prev) => ({ ...prev, service: initialService }));
-    }
-    if (initialDetails) {
-      setFormData((prev) => ({ ...prev, projectDetails: initialDetails }));
-    }
-  }, [initialService, initialDetails]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>

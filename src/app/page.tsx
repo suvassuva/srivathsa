@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2, ShieldCheck, Compass, Building2, Layers, MapPin } from "lucide-react";
+import { ArrowRight, CheckCircle2, ShieldCheck, Compass, Building2, MapPin } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
@@ -8,15 +8,20 @@ import { ProcessTimeline } from "@/components/ProcessTimeline";
 import { CTASection } from "@/components/CTASection";
 import { ProjectCard } from "@/components/ProjectCard";
 import { MaterialCard } from "@/components/MaterialCard";
+import { SignageSlider } from "@/components/SignageSlider";
 import { COMPANY_INFO } from "@/data/company";
 import { SIGNAGE_MATERIALS } from "@/data/materials";
 import { PROJECTS_DATA } from "@/data/projects";
+import { GALLERY_DATA } from "@/data/gallery";
 
 import { AutoSlider } from "@/components/AutoSlider";
 
 export default function HomePage() {
   const showcaseMaterials = SIGNAGE_MATERIALS.slice(0, 6);
   const featuredProjects = PROJECTS_DATA.slice(0, 3);
+  const homepageSignageReel = GALLERY_DATA.filter(
+    (i) => i.category === "signage" || i.category === "installation"
+  ).slice(0, 24);
 
   return (
     <div className="space-y-0 bg-slate-50">
@@ -80,7 +85,7 @@ export default function HomePage() {
                 subtitle="Manufacturing & Printing"
                 description="Custom signage manufactured using premium materials including stainless steel, aluminium, acrylic, PVC and brass."
                 href="/signage"
-                image="/stainless-steel-letters-on-wall.jpeg"
+                image="/signage-real-05.jpeg"
                 iconName="signage"
               />
 
@@ -273,6 +278,17 @@ export default function HomePage() {
                 </span>
               ))}
             </div>
+          </div>
+
+          {/* Auto-Playing Signage Projects Reel */}
+          <div className="pt-6 border-t border-slate-100">
+            <SignageSlider
+              items={homepageSignageReel}
+              autoPlayInterval={3600}
+              title="Recent Signage Fabrications & Installation Reel"
+              subtitle="Watch an auto-playing showcase of real client 3D channel letters, LED pylons & architectural signages."
+              tag="Featured Signage Slideshow"
+            />
           </div>
         </div>
       </section>
